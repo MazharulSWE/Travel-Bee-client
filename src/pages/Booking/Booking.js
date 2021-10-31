@@ -1,4 +1,3 @@
-import userEvent from '@testing-library/user-event';
 import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router';
@@ -37,7 +36,7 @@ const Booking = () => {
             <br />
             <input type="text"  placeholder="Address"/>
             <br />
-            <button className="btn btn-primary">Send</button>
+            <button  className="btn btn-primary">Send</button>
         </div>
        </div>
     );
