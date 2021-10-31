@@ -3,13 +3,13 @@ import './App.css';
 import AuthProvider from './context/AuthProvider';
 import About from './pages/About/About';
 import AddService from './pages/AddService/AddService';
-import AllOrders from './pages/AllOrders/AllOrders';
 import Booking from './pages/Booking/Booking';
 import Contact from './pages/Contact/Contact';
 import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login/Login';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
-import MyOrders from './pages/MyOrders/MyOrders';
+import ManageOrder from './pages/ManageOrder/ManageOrder';
+import MyOrders from './pages/MyOrder/MyOrder';
 import NotFound from './pages/NotFound/NotFound';
 import Footer from './pages/Shared/Footer/Footer';
 import Header from './pages/Shared/Header/Header';
@@ -42,11 +42,11 @@ function App() {
             <Route path="/addService">
               <AddService></AddService>
             </Route>
-            <Route path="/myorders">
+            <Route path="/myOrder">
               <MyOrders></MyOrders>
             </Route>
-            <Route path="/allorders">
-              <AllOrders></AllOrders>
+            <Route path="/manageOrder">
+              <ManageOrder></ManageOrder>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
