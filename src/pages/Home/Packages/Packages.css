@@ -1,0 +1,33 @@
+.packages-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+#packages h4{
+    color: orangered;
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight:900;
+}
+#packages h1{
+    color: rgba(104, 101, 100, 0.685);
+    margin-top: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-weight:900;
+    margin-bottom: 30px;
+}
+
+/* * Responsive style  */ 
+
+@media only screen and (max-width:688px) {
+    .package-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width:689px) and (max-width:991px) {
+    .package-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

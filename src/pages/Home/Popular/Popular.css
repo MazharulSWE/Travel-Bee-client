@@ -1,0 +1,41 @@
+.popular-image img{
+    height: 180px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 20px;
+    /* margin-top: 10px; */
+}
+.bg-card{
+    background-color: whitesmoke;
+    margin: 10px;
+    border-radius: 10px;
+}
+.bg-all{
+    background-image: url('../../../images/Banner/banner3.png');
+    padding: 30px;
+    
+}
+
+#popular p{
+   color: orangered;
+}
+#popular h1{
+   color: gray;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#popular{
+    margin-bottom: 0;
+}
+
+
+.write{
+    padding:10px ;
+}
+.write h2{
+    color: grey;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.write h4{
+    color: grey;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

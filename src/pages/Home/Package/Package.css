@@ -1,0 +1,37 @@
+.package{
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 3vh;
+    background-color: white;
+    border: 1px solid rgb(223, 118, 80);
+    box-shadow: rgb(216, 190, 190);
+    padding: 7px;
+    border-radius: 12px;
+}
+
+.package img{
+    width: 100%;
+    border-radius: 12px;
+    height: 214px;
+    object-fit: cover;
+}
+.package button{
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+  
+    font-weight: 600;
+    color: #d2dce7;
+    background-color: rgb(238, 117, 135);
+}
+.package h1{
+    font-size: xx-large;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgba(230, 63, 21, 0.952);
+}
+.package h3{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: dimgrey;
+}
