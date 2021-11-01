@@ -37,7 +37,12 @@
 }
 
 .table{
-    margin: 100px 100px 0 0;
+    background-color: darkgoldenrod;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 60px 0  0 200px;
 }
 .table input{
     margin: 10px;

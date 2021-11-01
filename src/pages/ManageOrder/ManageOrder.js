@@ -20,16 +20,18 @@ import './ManageOrder.css';
 const ManageOrder = () => {
         const [manageOrder, setManageOrder] = useState([]);
         useEffect(()=>{
-            fetch('https://possessed-witch-51667.herokuapp.com/allOrder')
+            fetch('https://possessed-witch-51667.herokuapp.com/order')
             .then(res=>res.json())
             .then(data=>setManageOrder(data))
+        
         },[])
+        
         console.log(manageOrder);
 
         const removeThisOrder = (e) =>{
             const confirm = window.confirm("Wanna Delete this Order?")
             if (confirm) {
-                fetch(`https://possessed-witch-51667.herokuapp.com/allOrder/${e}`,{
+                fetch(`https://possessed-witch-51667.herokuapp.com/order/${e}`,{
                     method: "delete"
                 })
                 .then(res=>res.json())

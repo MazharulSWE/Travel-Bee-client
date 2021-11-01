@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import React, { useEffect, useRef, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
@@ -8,6 +9,38 @@ const Booking = () => {
     const [details, setDetails] = useState([]);
     const {serviceId} = useParams();
     const {isLoading,user} = useAuth();
+    const nameRef = useRef();
+    const emailRef = useRef();
+    const addressRef = useRef();
+    
+  // newly add    
+  const sendData = (send)=>{
+      send.preventDefault();
+      const name= nameRef.current.value;
+      const email= emailRef.current.value;
+      const address= addressRef.current.value;
+      const allData = {
+          name:name, 
+          email:email,
+          address:address
+         
+      }
+
+      console.log(allData);
+      axios.post("https://possessed-witch-51667.herokuapp.com/orders",allData)
+      .then(res =>{
+        console.log(res);
+     })
+      
+          
+    //   }
+     
+    //   nameRef.current.value="";
+    //   emailRef.current.value="";
+      addressRef.current.value="";
+  }
+
+  
 
    useEffect(()=>{
        fetch('https://possessed-witch-51667.herokuapp.com/services')
@@ -30,13 +63,15 @@ const Booking = () => {
         </div>
         <div className="table">
             <h1>Place Your Order</h1>
-            <input type="text"  placeholder="Name" value={user.displayName}/>
+            <form onClick={sendData} action="">
+            <input type="text"  placeholder="Name" ref={nameRef} value={user.displayName}/>
             <br />
-            <input type="text"  placeholder="Email" value={user.email}/>
+            <input type="text"  placeholder="Email" ref={emailRef} value={user.email}/>
             <br />
-            <input type="text"  placeholder="Address"/>
+            <input type="text"  placeholder="Address" ref={addressRef}/>
             <br />
-            <button  className="btn btn-primary">Send</button>
+            <input type="submit" value="Send" />
+            </form>
         </div>
        </div>
     );

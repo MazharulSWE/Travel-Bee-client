@@ -24,7 +24,7 @@ const MyOrder = () => {
     const {user} = useAuth();
     const email = user.email;
     useEffect(()=>{
-        fetch('https://possessed-witch-51667.herokuapp.com/allOrder')
+        fetch('https://possessed-witch-51667.herokuapp.com/order')
         .then((res) => res.json())
         .then((data) => setMyOrder(data));
     },[]);
@@ -35,7 +35,7 @@ const MyOrder = () => {
     const ownOrderRemove = (event)=>{
         const confirmation = window.confirm("Are you sure delete this order")
         if (confirmation) {
-            fetch(`https://possessed-witch-51667.herokuapp.com/allOrder/${event}`,{
+            fetch(`https://possessed-witch-51667.herokuapp.com/order/${event}`,{
                 method: "delete"
             })
             .then(res =>res.json())
@@ -47,6 +47,7 @@ const MyOrder = () => {
             })
         }
     }
+    console.log(myOrder);
     return (
         <div id="myorders">
             <h2>All orders are here</h2>
